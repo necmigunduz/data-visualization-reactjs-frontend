@@ -1,11 +1,12 @@
-const DataFetch = async (url) => {  
-    let data = {};  
+const DataFetch = async () => {  
+    let data = {};
+
     try {    
-        const response = await fetch(url, {      
-            method: 'GET',      
+        const response = await fetch(`http://localhost:5000/api/statistics  `, {      
+            method: 'GET',          
             mode: 'cors',
     });
-    data = await response.json();  
+    data = await response.json();
     } 
     catch (e) {    
         data = 'ERROR';  
